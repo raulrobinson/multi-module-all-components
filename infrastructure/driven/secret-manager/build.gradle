@@ -1,0 +1,10 @@
+dependencies {
+    implementation libs.boot.starter.webflux
+    implementation project(':model')
+    implementation project(':ports')
+    implementation project(':aws-secret-manager')
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+}

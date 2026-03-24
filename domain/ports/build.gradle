@@ -1,0 +1,4 @@
+dependencies {
+    implementation libs.boot.starter.webflux
+    implementation project(':model')
+}

@@ -1,0 +1,46 @@
+rootProject.name = 'multi-module-all-components'
+
+// Application Layers
+include "app-service"
+include "use-case"
+project(':app-service').projectDir = file('applications/app-service')
+project(':use-case').projectDir = file('applications/use-case')
+
+// Domain Layers
+include "model"
+project(':model').projectDir = file('domain/model')
+include "ports"
+project(':ports').projectDir = file('domain/ports')
+
+// Infrastructure Layers
+include "http-api"
+project(':http-api').projectDir = file('infrastructure/entry-points/http-api')
+
+include "user-client-api"
+project(':user-client-api').projectDir = file('infrastructure/driven/user-client-api')
+
+include "secret-manager"
+project(':secret-manager').projectDir = file('infrastructure/driven/secret-manager')
+include "parameter-store"
+project(':parameter-store').projectDir = file('infrastructure/driven/parameter-store')
+include "lambda-parameter"
+project(':lambda-parameter').projectDir = file('infrastructure/driven/lambda-parameter')
+include "helpers"
+project(':helpers').projectDir = file('infrastructure/helpers')
+
+// [MODULES]
+include "aws-secret-manager"
+project(':aws-secret-manager').projectDir = file('modules/aws-secret-manager')
+
+include "aws-parameter-store"
+project(':aws-parameter-store').projectDir = file('modules/aws-parameter-store')
+
+include "aws-lambda-function"
+project(':aws-lambda-function').projectDir = file('modules/aws-lambda-function')
+
+include "resilience"
+project(':resilience').projectDir = file('modules/resilience')
+
+// [COMMON LIBS]
+include "core-lib"
+project(':core-lib').projectDir = file('common-libs/core-lib')
