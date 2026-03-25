@@ -8,16 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Getter
 @ConfigurationProperties(prefix = "aws.parameters")
 public class ParameterStoreProperties {
-
-    /**
-     * AWS region, for example: us-east-1.
-     */
     private String region;
-
-    /**
-     * Optional endpoint override (useful for local tests with LocalStack).
-     */
     private String endpointOverride;
-
 }
 

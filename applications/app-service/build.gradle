@@ -1,0 +1,19 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation project(':model')
+    implementation project(':ports')
+    implementation project(':use-case')
+    //implementation project(':rest-api')
+    //implementation project(':alpha-client')
+    //implementation project(':beta-client')
+    //implementation project(':gamma-client')
+    //implementation project(':secrets')
+    implementation project(':parameter-store')
+    //implementation project(':resilience')
+    //implementation project(':helpers')
+
+    implementation libs.boot.starter.webflux
+    //implementation libs.actuator
+    //implementation libs.micrometer.registry.prometheus
+}
